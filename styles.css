@@ -828,6 +828,78 @@ input, select, textarea { font-family: inherit; }
 }
 @keyframes toastIn { from { opacity:0; transform: translateX(-50%) translateY(10px); } to { opacity:1; transform: translateX(-50%) translateY(0); } }
 
+/* ── Language Toggle Button ── */
+.lang-btn {
+  padding: 5px 11px; border-radius: 20px;
+  background: var(--surface3); border: 1.5px solid var(--border);
+  font-size: 0.78rem; font-weight: 700; color: var(--primary);
+  letter-spacing: 0.3px; transition: all var(--transition);
+  flex-shrink: 0;
+}
+.lang-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+[dir="rtl"] .lang-btn { font-family: 'Inter', system-ui, sans-serif; }
+
+/* ── RTL / Arabic ── */
+[dir="rtl"] {
+  font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+}
+[dir="rtl"] .top-header,
+[dir="rtl"] .search-bar-wrap,
+[dir="rtl"] .section-header,
+[dir="rtl"] .contact-header,
+[dir="rtl"] .news-card,
+[dir="rtl"] .team-card,
+[dir="rtl"] .contact-actions,
+[dir="rtl"] .campus-tabs,
+[dir="rtl"] .contact-row,
+[dir="rtl"] .prog-card-header,
+[dir="rtl"] .prog-card-meta { flex-direction: row-reverse; }
+[dir="rtl"] .hero-content { align-items: flex-end; text-align: right; }
+[dir="rtl"] .hero-badge,
+[dir="rtl"] .cta-btn { align-self: flex-end; }
+[dir="rtl"] .hero-desc { margin-right: 0; text-align: right; }
+[dir="rtl"] .stat-label,
+[dir="rtl"] .stat-num { font-family: 'Cairo', sans-serif; }
+[dir="rtl"] .about-text,
+[dir="rtl"] .prog-card-desc,
+[dir="rtl"] .faq-answer p,
+[dir="rtl"] .news-full-body p,
+[dir="rtl"] .about-card,
+[dir="rtl"] .mission-card,
+[dir="rtl"] .team-info { text-align: right; }
+[dir="rtl"] .faq-question { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .drawer-nav { left: 0; right: auto; animation: drawerSlideRTL 0.28s cubic-bezier(0.4,0,0.2,1); }
+@keyframes drawerSlideRTL { from { transform: translateX(-100%); } to { transform: none; } }
+[dir="rtl"] .drawer-header { flex-direction: row-reverse; }
+[dir="rtl"] .drawer-links { text-align: right; }
+[dir="rtl"] .bottom-nav { direction: rtl; }
+[dir="rtl"] .quick-grid,
+[dir="rtl"] .mission-grid,
+[dir="rtl"] .social-grid { direction: rtl; }
+[dir="rtl"] .news-scroll,
+[dir="rtl"] .programs-scroll { direction: rtl; }
+[dir="rtl"] .news-scroll > *,
+[dir="rtl"] .programs-scroll > * { direction: ltr; text-align: right; }
+[dir="rtl"] .filter-tabs,
+[dir="rtl"] .news-filter-chips,
+[dir="rtl"] .media-tabs,
+[dir="rtl"] .campus-tabs { direction: rtl; }
+[dir="rtl"] .form-field { text-align: right; }
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-select,
+[dir="rtl"] .form-textarea { text-align: right; direction: rtl; }
+[dir="rtl"] .contact-btn { flex-direction: row-reverse; }
+[dir="rtl"] .map-inner { direction: rtl; text-align: right; }
+[dir="rtl"] .partners-strip,
+[dir="rtl"] .activities-grid { direction: rtl; }
+[dir="rtl"] .prog-card-body { text-align: right; }
+[dir="rtl"] .prog-card-tags { direction: rtl; }
+[dir="rtl"] .page-hero-content { text-align: right; }
+[dir="rtl"] .media-cta-btn { flex-direction: row-reverse; }
+[dir="rtl"] .social-card { flex-direction: row-reverse; }
+[dir="rtl"] .news-full-body { text-align: right; }
+[dir="rtl"] .contact-details { direction: rtl; }
+
 /* ── Desktop ── */
 @media (min-width: 640px) {
   .hero-slider { height: 560px; }
