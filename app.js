@@ -119,6 +119,12 @@ const translations = {
     form_opt3:'Partenariat', form_opt4:'Autre',
     form_msg:'Message', form_msg_ph:'Votre message…',
     form_submit:'Envoyer le message',
+    // Programs CTA
+    inscrit_title:'Prêt à rejoindre IFJ Sup ?',
+    inscrit_sub:'Candidatures ouvertes – places limitées',
+    inscrit_btn:"Nous contacter pour s'inscrire",
+    // Media
+    yt_channel:'Notre chaîne YouTube',
     toast_sent:'Message envoyé avec succès ! ✓',
     toast_soon:'Contenu bientôt disponible',
   },
@@ -237,6 +243,12 @@ const translations = {
     form_opt3:'شراكة', form_opt4:'أخرى',
     form_msg:'الرسالة', form_msg_ph:'رسالتك…',
     form_submit:'إرسال الرسالة',
+    // Programs CTA
+    inscrit_title:'هل أنت مستعد للانضمام إلى IFJ Sup؟',
+    inscrit_sub:'التسجيلات مفتوحة – أماكن محدودة',
+    inscrit_btn:'تواصل معنا للتسجيل',
+    // Media
+    yt_channel:'قناتنا على يوتيوب',
     toast_sent:'تم إرسال الرسالة بنجاح ! ✓',
     toast_soon:'المحتوى قادم قريباً',
   }
@@ -252,8 +264,10 @@ function setLanguage(lang) {
   html.lang = lang;
   html.dir = lang === 'ar' ? 'rtl' : 'ltr';
 
-  const langBtn = document.getElementById('langBtn');
-  if (langBtn) langBtn.textContent = lang === 'ar' ? 'FR' : 'عربي';
+  // Update segmented control active state
+  document.querySelectorAll('.lang-seg-opt').forEach(btn => {
+    btn.classList.toggle('active-seg', btn.dataset.lang === lang);
+  });
 
   // textContent
   document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -289,8 +303,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Lang Toggle ───────────────────────────────────────────────
-document.getElementById('langBtn')?.addEventListener('click', () => {
-  setLanguage(currentLang === 'fr' ? 'ar' : 'fr');
+document.querySelectorAll('.lang-seg-opt').forEach(btn => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
 });
 
 // ── Navigation ────────────────────────────────────────────────
@@ -320,7 +334,7 @@ navItems.forEach(item => item.addEventListener('click', () => navigateTo(item.da
 document.addEventListener('click', e => {
   const btn = e.target.closest('[data-page]');
   if (!btn) return;
-  if (btn.classList.contains('nav-item') || btn.classList.contains('lang-btn')) return;
+  if (btn.classList.contains('nav-item') || btn.classList.contains('lang-seg-opt')) return;
   navigateTo(btn.dataset.page);
 });
 

@@ -18,9 +18,12 @@
 <!-- SPLASH -->
 <div id="splash" class="splash">
   <div class="splash-inner">
-    <div class="splash-logo">
-      <span class="splash-logo-ifj">IFJ</span>
-      <span class="splash-logo-sup">SUP</span>
+    <div class="splash-logo-wrap">
+      <img class="splash-logo-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/cropped-logo_ifjpress-tst-4.png" alt="IFJ Sup" onerror="this.style.display='none';document.getElementById('splashLogoText').style.display='flex';" />
+      <div class="splash-logo hidden" id="splashLogoText">
+        <span class="splash-logo-ifj">IFJ</span>
+        <span class="splash-logo-sup">SUP</span>
+      </div>
     </div>
     <p class="splash-tagline" data-i18n="splash_tagline">Former les journalistes de demain</p>
     <div class="splash-loader"><div class="splash-bar"></div></div>
@@ -34,11 +37,17 @@
   <header class="top-header">
     <div class="header-left">
       <div class="logo-mark">
-        <span class="logo-ifj">IFJ</span><span class="logo-sup">SUP</span>
+        <img class="logo-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/cropped-logo_ifjpress-tst-4.png" alt="IFJ Sup" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex';" />
+        <div class="logo-text hidden" id="logoText">
+          <span class="logo-ifj">IFJ</span><span class="logo-sup">SUP</span>
+        </div>
       </div>
     </div>
     <div class="header-right">
-      <button class="lang-btn" id="langBtn" aria-label="Switch language">عربي</button>
+      <div class="lang-seg" id="langSeg">
+        <button class="lang-seg-opt active-seg" data-lang="fr">FR</button>
+        <button class="lang-seg-opt" data-lang="ar">عر</button>
+      </div>
       <button class="icon-btn" id="searchBtn" aria-label="Search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       </button>
@@ -93,9 +102,9 @@
     <section id="page-home" class="page active-page">
 
       <div class="hero-slider">
-        <!-- Slide 1 -->
+        <!-- Slide 1 – Plateau TV -->
         <div class="hero-slide active-slide">
-          <div class="hero-bg hero-bg-1"></div>
+          <div class="hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg')"></div>
           <div class="hero-content">
             <span class="hero-badge" data-i18n="h1_badge">Depuis 1994</span>
             <h1 class="hero-title" data-i18n-html="h1_title">Former les journalistes<br/><em>de demain</em></h1>
@@ -103,9 +112,9 @@
             <button class="cta-btn" data-page="programs" data-i18n="h1_cta">Découvrir nos formations</button>
           </div>
         </div>
-        <!-- Slide 2 -->
+        <!-- Slide 2 – Partenariats -->
         <div class="hero-slide">
-          <div class="hero-bg hero-bg-2"></div>
+          <div class="hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Partenariat_ifjpress-e1530733806513.jpg')"></div>
           <div class="hero-content">
             <span class="hero-badge" data-i18n="h2_badge">Partenariats Internationaux</span>
             <h1 class="hero-title" data-i18n-html="h2_title">Ouverture sur<br/><em>le monde</em></h1>
@@ -113,9 +122,9 @@
             <button class="cta-btn" data-page="about" data-i18n="h2_cta">En savoir plus</button>
           </div>
         </div>
-        <!-- Slide 3 -->
+        <!-- Slide 3 – Background -->
         <div class="hero-slide">
-          <div class="hero-bg hero-bg-3"></div>
+          <div class="hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Background_ifjpress-1878x874.jpg')"></div>
           <div class="hero-content">
             <span class="hero-badge" data-i18n="h3_badge">+3 250 Diplômés</span>
             <h1 class="hero-title" data-i18n-html="h3_title">Une excellence<br/><em>reconnue</em></h1>
@@ -172,22 +181,31 @@
         </div>
         <div class="news-scroll">
           <article class="news-card news-card--featured">
-            <div class="news-cat" data-i18n="nc1_cat">Partenariat</div>
-            <h3 class="news-title" data-i18n="nc1_title">Formation des présentateurs Al Jazeera</h3>
-            <p class="news-excerpt" data-i18n="nc1_excerpt">IFJ Sup accueille une formation intensive de 5 jours pour les présentateurs de la chaîne Al Jazeera TV.</p>
-            <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            <div class="news-card-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg')"></div>
+            <div class="news-card-body">
+              <div class="news-cat" data-i18n="nc1_cat">Partenariat</div>
+              <h3 class="news-title" data-i18n="nc1_title">Formation des présentateurs Al Jazeera</h3>
+              <p class="news-excerpt" data-i18n="nc1_excerpt">IFJ Sup accueille une formation intensive de 5 jours pour les présentateurs de la chaîne Al Jazeera TV.</p>
+              <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            </div>
           </article>
           <article class="news-card">
-            <div class="news-cat" data-i18n="nc2_cat">Communauté</div>
-            <h3 class="news-title" data-i18n="nc2_title">Partenariat avec la commune Aïn Chock</h3>
-            <p class="news-excerpt" data-i18n="nc2_excerpt">Un accord de coopération signé pour renforcer les liens entre l'institut et la collectivité locale.</p>
-            <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            <div class="news-card-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Partenariat_ifjpress-e1530733806513.jpg')"></div>
+            <div class="news-card-body">
+              <div class="news-cat" data-i18n="nc2_cat">Communauté</div>
+              <h3 class="news-title" data-i18n="nc2_title">Partenariat avec la commune Aïn Chock</h3>
+              <p class="news-excerpt" data-i18n="nc2_excerpt">Un accord de coopération signé pour renforcer les liens entre l'institut et la collectivité locale.</p>
+              <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            </div>
           </article>
           <article class="news-card">
-            <div class="news-cat" data-i18n="nc3_cat">Examens</div>
-            <h3 class="news-title" data-i18n="nc3_title">Soutenances de fin d'études</h3>
-            <p class="news-excerpt" data-i18n="nc3_excerpt">Les étudiants en fin de cursus présentent leurs projets de fin d'études devant un jury professionnel.</p>
-            <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            <div class="news-card-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Background_ifjpress-1878x874.jpg')"></div>
+            <div class="news-card-body">
+              <div class="news-cat" data-i18n="nc3_cat">Examens</div>
+              <h3 class="news-title" data-i18n="nc3_title">Soutenances de fin d'études</h3>
+              <p class="news-excerpt" data-i18n="nc3_excerpt">Les étudiants en fin de cursus présentent leurs projets de fin d'études devant un jury professionnel.</p>
+              <span class="news-date" data-i18n="lbl_recent">Récent</span>
+            </div>
           </article>
         </div>
       </div>
@@ -199,22 +217,49 @@
           <button class="see-all" data-page="programs" data-i18n="see_all">Voir tout</button>
         </div>
         <div class="programs-scroll">
-          <div class="prog-mini-card" data-page="programs"><div class="prog-mini-icon">📡</div><h4 data-i18n="prog1_title">Journalisme</h4><span class="prog-badge">BAC + 3</span></div>
-          <div class="prog-mini-card" data-page="programs"><div class="prog-mini-icon">🎥</div><h4 data-i18n="prog2_short">Ingénierie Audiovisuelle</h4><span class="prog-badge">BAC + 3</span></div>
-          <div class="prog-mini-card" data-page="programs"><div class="prog-mini-icon">📱</div><h4 data-i18n="prog3_title">Médias Numériques</h4><span class="prog-badge">BAC + 3</span></div>
-          <div class="prog-mini-card" data-page="programs"><div class="prog-mini-icon">🏆</div><h4 data-i18n="prog4_title">Diplomatie Sportive</h4><span class="prog-badge">BAC + 3+</span></div>
+          <div class="prog-mini-card" data-page="programs">
+            <div class="prog-mini-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme1_ifjpress-358x276.jpg')"></div>
+            <div class="prog-mini-body"><h4 data-i18n="prog1_title">Journalisme</h4><span class="prog-badge">BAC + 3</span></div>
+          </div>
+          <div class="prog-mini-card" data-page="programs">
+            <div class="prog-mini-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Ing%C3%A9nierie_ifjpress-358x276.jpg')"></div>
+            <div class="prog-mini-body"><h4 data-i18n="prog2_short">Ingénierie Audiovisuelle</h4><span class="prog-badge">BAC + 3</span></div>
+          </div>
+          <div class="prog-mini-card" data-page="programs">
+            <div class="prog-mini-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-M%C3%A9dias-Num%C3%A9rique_ifjpress-358x276.jpg')"></div>
+            <div class="prog-mini-body"><h4 data-i18n="prog3_title">Médias Numériques</h4><span class="prog-badge">BAC + 3</span></div>
+          </div>
+          <div class="prog-mini-card" data-page="programs">
+            <div class="prog-mini-thumb" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Diplomacie_ifjpress-358x276.jpg')"></div>
+            <div class="prog-mini-body"><h4 data-i18n="prog4_title">Diplomatie Sportive</h4><span class="prog-badge">BAC + 3+</span></div>
+          </div>
         </div>
       </div>
 
       <!-- Partners -->
       <div class="section-wrap">
         <h2 class="section-title" data-i18n="our_partners">Nos partenaires</h2>
-        <div class="partners-strip">
-          <div class="partner-tag">Al Jazeera Institute</div>
-          <div class="partner-tag">EDJ</div>
-          <div class="partner-tag" data-i18n="partner_bm">Faculté Béni Mellal</div>
-          <div class="partner-tag" data-i18n="partner_gc">Académie Grand Casablanca</div>
-          <div class="partner-tag" data-i18n="partner_ac">Commune Aïn Chock</div>
+        <div class="partner-logos">
+          <div class="partner-logo-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Al_Jazeera_Logo.svg/200px-Al_Jazeera_Logo.svg.png" alt="Al Jazeera Institute" onerror="this.style.display='none'" />
+            <span>Al Jazeera<br/>Institute</span>
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://www.ifjsup.ma/wp-content/uploads/2018/06/logo-partenariat-edj.jpg" alt="EDJ" onerror="this.style.display='none'" />
+            <span>EDJ</span>
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://www.ifjsup.ma/wp-content/uploads/2018/06/logo-partenariat-bm.jpg" alt="Béni Mellal" onerror="this.style.display='none'" />
+            <span data-i18n="partner_bm">Faculté<br/>Béni Mellal</span>
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://www.ifjsup.ma/wp-content/uploads/2018/06/logo-partenariat-academie.jpg" alt="Académie Grand Casablanca" onerror="this.style.display='none'" />
+            <span data-i18n="partner_gc">Académie<br/>Casablanca</span>
+          </div>
+          <div class="partner-logo-item">
+            <img src="https://www.ifjsup.ma/wp-content/uploads/2018/06/logo-partenariat-ain-chock.jpg" alt="Commune Aïn Chock" onerror="this.style.display='none'" />
+            <span data-i18n="partner_ac">Commune<br/>Aïn Chock</span>
+          </div>
         </div>
       </div>
 
@@ -222,11 +267,17 @@
 
     <!-- PAGE: ABOUT -->
     <section id="page-about" class="page">
-      <div class="page-hero page-hero--about">
-        <div class="page-hero-overlay"></div>
+      <div class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg')"></div>
         <div class="page-hero-content">
           <h2 class="page-hero-title" data-i18n="nav_about">À Propos</h2>
           <p class="page-hero-sub" data-i18n="about_sub">Institut Supérieur de Journalisme</p>
+        </div>
+      </div>
+
+      <div class="section-wrap">
+        <div class="about-photo-wrap">
+          <img class="about-photo" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Message-pr%C3%A9sentation-ifj_ifjpress-e1529972495198-285x193.jpg" alt="IFJ Sup – Message de présentation" />
         </div>
       </div>
 
@@ -299,8 +350,8 @@
 
     <!-- PAGE: PROGRAMS -->
     <section id="page-programs" class="page">
-      <div class="page-hero page-hero--programs">
-        <div class="page-hero-overlay"></div>
+      <div class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme1_ifjpress-358x276.jpg')"></div>
         <div class="page-hero-content">
           <h2 class="page-hero-title" data-i18n="nav_programs">Formations</h2>
           <p class="page-hero-sub" data-i18n="programs_sub">6 filières reconnues et accréditées</p>
@@ -318,8 +369,11 @@
       <div class="section-wrap programs-list" id="programsList">
 
         <div class="prog-card" data-category="licence">
-          <div class="prog-card-header" style="--prog-color:#0A2463">
-            <span class="prog-card-icon">📡</span><span class="prog-card-level">BAC + 3</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme1_ifjpress-358x276.jpg" alt="Journalisme" />
+            <div class="prog-card-header-overlay" style="--prog-r:10;--prog-g:36;--prog-b:99;">
+              <span class="prog-card-icon">📡</span><span class="prog-card-level">BAC + 3</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog1_title">Journalisme</h3>
@@ -330,8 +384,11 @@
         </div>
 
         <div class="prog-card" data-category="licence">
-          <div class="prog-card-header" style="--prog-color:#1D3461">
-            <span class="prog-card-icon">🎥</span><span class="prog-card-level">BAC + 3</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Ing%C3%A9nierie_ifjpress-358x276.jpg" alt="Ingénierie Audiovisuelle" />
+            <div class="prog-card-header-overlay" style="--prog-r:29;--prog-g:52;--prog-b:97;">
+              <span class="prog-card-icon">🎥</span><span class="prog-card-level">BAC + 3</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog2_title">Ingénierie des Technologies Audiovisuelles</h3>
@@ -342,8 +399,11 @@
         </div>
 
         <div class="prog-card" data-category="licence">
-          <div class="prog-card-header" style="--prog-color:#2B4EAA">
-            <span class="prog-card-icon">📱</span><span class="prog-card-level">BAC + 3 / Licence</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-M%C3%A9dias-Num%C3%A9rique_ifjpress-358x276.jpg" alt="Médias Numériques" />
+            <div class="prog-card-header-overlay" style="--prog-r:43;--prog-g:78;--prog-b:170;">
+              <span class="prog-card-icon">📱</span><span class="prog-card-level">BAC + 3 / Licence</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog3_title">Médias Numériques</h3>
@@ -354,8 +414,11 @@
         </div>
 
         <div class="prog-card" data-category="licence">
-          <div class="prog-card-header" style="--prog-color:#E63946">
-            <span class="prog-card-icon">🏆</span><span class="prog-card-level">BAC + 3+</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Diplomacie_ifjpress-358x276.jpg" alt="Diplomatie Sportive" />
+            <div class="prog-card-header-overlay" style="--prog-r:230;--prog-g:57;--prog-b:70;">
+              <span class="prog-card-icon">🏆</span><span class="prog-card-level">BAC + 3+</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog4_title">Diplomatie Sportive</h3>
@@ -366,8 +429,11 @@
         </div>
 
         <div class="prog-card" data-category="tech">
-          <div class="prog-card-header" style="--prog-color:#2A9D8F">
-            <span class="prog-card-icon">📰</span><span class="prog-card-level" data-i18n="level_bac">Niveau BAC</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme-Technicien_ifjpress-358x276.jpg" alt="Journalisme Technique" />
+            <div class="prog-card-header-overlay" style="--prog-r:42;--prog-g:157;--prog-b:143;">
+              <span class="prog-card-icon">📰</span><span class="prog-card-level" data-i18n="level_bac">Niveau BAC</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog5_title">Journalisme Technique</h3>
@@ -378,8 +444,11 @@
         </div>
 
         <div class="prog-card" data-category="tech">
-          <div class="prog-card-header" style="--prog-color:#457B9D">
-            <span class="prog-card-icon">🎬</span><span class="prog-card-level" data-i18n="level_bac">Niveau BAC</span>
+          <div class="prog-card-header">
+            <img class="prog-card-header-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-TAV_ifjpress-358x276.jpg" alt="Technicien Audiovisuel" />
+            <div class="prog-card-header-overlay" style="--prog-r:69;--prog-g:123;--prog-b:157;">
+              <span class="prog-card-icon">🎬</span><span class="prog-card-level" data-i18n="level_bac">Niveau BAC</span>
+            </div>
           </div>
           <div class="prog-card-body">
             <h3 class="prog-card-title" data-i18n="prog6_title">Technicien Audiovisuel</h3>
@@ -389,6 +458,13 @@
           </div>
         </div>
 
+      </div>
+
+      <!-- Inscription CTA -->
+      <div class="inscrit-strip">
+        <h3 data-i18n="inscrit_title">Prêt à rejoindre IFJ Sup ?</h3>
+        <p data-i18n="inscrit_sub">Candidatures ouvertes – places limitées</p>
+        <button class="inscrit-btn" data-page="contact" data-i18n="inscrit_btn">Nous contacter pour s'inscrire</button>
       </div>
 
       <div class="section-wrap">
@@ -416,8 +492,8 @@
 
     <!-- PAGE: NEWS -->
     <section id="page-news" class="page">
-      <div class="page-hero page-hero--news">
-        <div class="page-hero-overlay"></div>
+      <div class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Partenariat_ifjpress-e1530733806513.jpg')"></div>
         <div class="page-hero-content">
           <h2 class="page-hero-title" data-i18n="nav_news">Actualités</h2>
           <p class="page-hero-sub" data-i18n="news_sub">Vie de l'institut &amp; événements</p>
@@ -436,7 +512,9 @@
 
       <div class="section-wrap news-full-list">
         <article class="news-full-card" data-cat="partenariat">
-          <div class="news-full-img news-full-img--1"><span class="news-full-cat" data-i18n="nc1_cat">Partenariat</span></div>
+          <div class="news-full-img" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg')">
+            <span class="news-full-cat" data-i18n="nc1_cat">Partenariat</span>
+          </div>
           <div class="news-full-body">
             <h3 data-i18n="nfc1_title">Formation intensive des présentateurs Al Jazeera</h3>
             <p data-i18n="nfc1_body">IFJ Sup accueille pendant 5 jours les présentateurs et journalistes de la chaîne Al Jazeera TV pour une formation intensive sur les techniques de présentation et la gestion des plateaux télévisés.</p>
@@ -444,7 +522,9 @@
           </div>
         </article>
         <article class="news-full-card" data-cat="partenariat">
-          <div class="news-full-img news-full-img--2"><span class="news-full-cat" data-i18n="nc1_cat">Partenariat</span></div>
+          <div class="news-full-img" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Partenariat_ifjpress-e1530733806513.jpg')">
+            <span class="news-full-cat" data-i18n="nc1_cat">Partenariat</span>
+          </div>
           <div class="news-full-body">
             <h3 data-i18n="nfc2_title">Accord de coopération avec la commune Aïn Chock</h3>
             <p data-i18n="nfc2_body">Signature d'un partenariat stratégique entre IFJ Sup et la commune Aïn Chock de Casablanca pour renforcer les liens entre la formation professionnelle et la collectivité locale.</p>
@@ -452,7 +532,9 @@
           </div>
         </article>
         <article class="news-full-card" data-cat="examens">
-          <div class="news-full-img news-full-img--3"><span class="news-full-cat" data-i18n="nfc3_cat">Examens</span></div>
+          <div class="news-full-img" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Background_ifjpress-1878x874.jpg')">
+            <span class="news-full-cat" data-i18n="nfc3_cat">Examens</span>
+          </div>
           <div class="news-full-body">
             <h3 data-i18n="nfc3_title">Soutenances de projets de fin d'études</h3>
             <p data-i18n="nfc3_body">Les étudiants en dernière année présentent leurs projets de fin d'études devant un jury composé de professionnels des médias. Une étape clé vers l'insertion professionnelle.</p>
@@ -460,7 +542,9 @@
           </div>
         </article>
         <article class="news-full-card" data-cat="evenement">
-          <div class="news-full-img news-full-img--4"><span class="news-full-cat" data-i18n="nfc4_cat">Événement</span></div>
+          <div class="news-full-img" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme1_ifjpress-358x276.jpg')">
+            <span class="news-full-cat" data-i18n="nfc4_cat">Événement</span>
+          </div>
           <div class="news-full-body">
             <h3 data-i18n="nfc4_title">Annonce des examens de fin de semestre</h3>
             <p data-i18n="nfc4_body">L'administration annonce le calendrier des examens de fin de semestre. Les étudiants sont invités à consulter leurs emplois du temps et à se préparer en conséquence.</p>
@@ -468,7 +552,9 @@
           </div>
         </article>
         <article class="news-full-card" data-cat="formation">
-          <div class="news-full-img news-full-img--5"><span class="news-full-cat" data-i18n="nf_training">Formation</span></div>
+          <div class="news-full-img" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Ing%C3%A9nierie_ifjpress-358x276.jpg')">
+            <span class="news-full-cat" data-i18n="nf_training">Formation</span>
+          </div>
           <div class="news-full-body">
             <h3 data-i18n="nfc5_title">Atelier de maîtrise des équipements audio</h3>
             <p data-i18n="nfc5_body">Un atelier pratique dédié à la maîtrise des équipements audio professionnels : micros de reportage, consoles de mixage et techniques de prise de son en studio et sur le terrain.</p>
@@ -480,12 +566,30 @@
 
     <!-- PAGE: MEDIA -->
     <section id="page-media" class="page">
-      <div class="page-hero page-hero--media">
-        <div class="page-hero-overlay"></div>
+      <div class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Background_ifjpress-1878x874.jpg')"></div>
         <div class="page-hero-content">
           <h2 class="page-hero-title" data-i18n="nav_media">Médiathèque</h2>
           <p class="page-hero-sub" data-i18n="media_sub">Productions étudiantes &amp; ressources</p>
         </div>
+      </div>
+
+      <!-- YouTube Channel -->
+      <div class="section-wrap yt-section">
+        <h2 class="yt-section-title" data-i18n="yt_channel">Notre chaîne YouTube</h2>
+        <div class="yt-embed-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=UU0yoXJ2JfftNgfoijckGejQ&rel=0&modestbranding=1"
+            title="IFJ Sup – Productions étudiantes"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <a href="https://www.youtube.com/@ifjsup" target="_blank" rel="noopener" class="yt-channel-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/></svg>
+          <span data-i18n="media_yt">Voir notre chaîne YouTube</span>
+        </a>
       </div>
 
       <div class="section-wrap">
@@ -498,26 +602,56 @@
 
       <div class="section-wrap">
         <div class="media-grid" id="mediaGrid">
-          <div class="media-card" data-type="videos"><div class="media-thumb media-thumb--1"><div class="play-btn">▶</div></div><div class="media-info"><h4 data-i18n="mc1_title">Journal télévisé étudiant</h4><span class="media-tag" data-i18n="mc1_tag">TV • Production étudiante</span></div></div>
-          <div class="media-card" data-type="videos"><div class="media-thumb media-thumb--2"><div class="play-btn">▶</div></div><div class="media-info"><h4 data-i18n="mc2_title">Reportage : Présidentielle au Maroc</h4><span class="media-tag" data-i18n="mc2_tag">Reportage • Journalisme</span></div></div>
-          <div class="media-card" data-type="videos"><div class="media-thumb media-thumb--3"><div class="play-btn">▶</div></div><div class="media-info"><h4 data-i18n="mc3_title">Émission culture &amp; société</h4><span class="media-tag" data-i18n="mc3_tag">Magazine • Audiovisuel</span></div></div>
-          <div class="media-card" data-type="photos"><div class="media-thumb media-thumb--4"><div class="zoom-btn">🔍</div></div><div class="media-info"><h4 data-i18n="mc4_title">Cérémonie de remise de diplômes 2023</h4><span class="media-tag" data-i18n="mc4_tag">Photos • Événement</span></div></div>
-          <div class="media-card" data-type="photos"><div class="media-thumb media-thumb--5"><div class="zoom-btn">🔍</div></div><div class="media-info"><h4 data-i18n="mc5_title">Atelier de formation Al Jazeera</h4><span class="media-tag" data-i18n="mc5_tag">Photos • Formation</span></div></div>
-          <div class="media-card" data-type="radio"> <div class="media-thumb media-thumb--6"><div class="play-btn">▶</div></div><div class="media-info"><h4 data-i18n="mc6_title">Émission radio IFJ FM</h4><span class="media-tag" data-i18n="mc6_tag">Radio • Actualités</span></div></div>
-        </div>
-        <div class="media-cta-wrap">
-          <a href="https://www.youtube.com/@ifjsup" target="_blank" rel="noopener" class="media-cta-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0C.488 3.45.029 5.804 0 12c.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0C23.512 20.55 23.971 18.196 24 12c-.029-6.185-.484-8.549-4.385-8.816zM9 16V8l8 3.993L9 16z"/></svg>
-            <span data-i18n="media_yt">Voir notre chaîne YouTube</span>
-          </a>
+          <div class="media-card" data-type="videos">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg" alt="Journal télévisé étudiant" />
+              <div class="play-btn"><div class="play-btn-inner">▶</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc1_title">Journal télévisé étudiant</h4><span class="media-tag" data-i18n="mc1_tag">TV • Production étudiante</span></div>
+          </div>
+          <div class="media-card" data-type="videos">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Partenariat_ifjpress-e1530733806513.jpg" alt="Reportage" />
+              <div class="play-btn"><div class="play-btn-inner">▶</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc2_title">Reportage : Présidentielle au Maroc</h4><span class="media-tag" data-i18n="mc2_tag">Reportage • Journalisme</span></div>
+          </div>
+          <div class="media-card" data-type="videos">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Background_ifjpress-1878x874.jpg" alt="Émission" />
+              <div class="play-btn"><div class="play-btn-inner">▶</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc3_title">Émission culture &amp; société</h4><span class="media-tag" data-i18n="mc3_tag">Magazine • Audiovisuel</span></div>
+          </div>
+          <div class="media-card" data-type="photos">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Journalisme1_ifjpress-358x276.jpg" alt="Cérémonie diplômes" />
+              <div class="zoom-btn"><div class="zoom-btn-inner">🔍</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc4_title">Cérémonie de remise de diplômes 2023</h4><span class="media-tag" data-i18n="mc4_tag">Photos • Événement</span></div>
+          </div>
+          <div class="media-card" data-type="photos">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-Ing%C3%A9nierie_ifjpress-358x276.jpg" alt="Atelier Al Jazeera" />
+              <div class="zoom-btn"><div class="zoom-btn-inner">🔍</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc5_title">Atelier de formation Al Jazeera</h4><span class="media-tag" data-i18n="mc5_tag">Photos • Formation</span></div>
+          </div>
+          <div class="media-card" data-type="radio">
+            <div class="media-thumb">
+              <img class="media-thumb-img" src="https://www.ifjsup.ma/wp-content/uploads/2018/06/Fili%C3%A8re-M%C3%A9dias-Num%C3%A9rique_ifjpress-358x276.jpg" alt="Radio IFJ FM" />
+              <div class="play-btn"><div class="play-btn-inner">▶</div></div>
+            </div>
+            <div class="media-info"><h4 data-i18n="mc6_title">Émission radio IFJ FM</h4><span class="media-tag" data-i18n="mc6_tag">Radio • Actualités</span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PAGE: CONTACT -->
     <section id="page-contact" class="page">
-      <div class="page-hero page-hero--contact">
-        <div class="page-hero-overlay"></div>
+      <div class="page-hero">
+        <div class="page-hero-bg" style="background-image:url('https://www.ifjsup.ma/wp-content/uploads/2018/06/Slider-Plateau-emission_ifjpress-e1530638348906-1878x874.jpg')"></div>
         <div class="page-hero-content">
           <h2 class="page-hero-title" data-i18n="nav_contact">Contact</h2>
           <p class="page-hero-sub" data-i18n="contact_sub">Deux campus au Maroc</p>
