@@ -440,6 +440,76 @@ input,select,textarea { font-family:inherit; }
 [dir="rtl"] .stat-label,[dir="rtl"] .stat-num { font-family:'Cairo',sans-serif; }
 [dir="rtl"] .prog-mini-body { text-align:right; }
 
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --primary:      #0A2463;
+  --primary-mid:  #1A3A8F;
+  --primary-light:#60A5FA;
+  --surface:      #1E293B;
+  --surface2:     #0F172A;
+  --surface3:     #273549;
+  --text:         #EEF2FF;
+  --text-2:       #A8B8CC;
+  --text-3:       #64748B;
+  --border:       #2D3F55;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,.4),0 1px 2px rgba(0,0,0,.3);
+  --shadow:       0 4px 16px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.35);
+  --shadow-lg:    0 10px 40px rgba(0,0,0,.7);
+}
+[data-theme="dark"] body { background:var(--surface2); }
+[data-theme="dark"] .top-header { background:rgba(15,23,42,.93); }
+[data-theme="dark"] .bottom-nav { background:rgba(15,23,42,.96); }
+[data-theme="dark"] .search-overlay { background:var(--surface2); }
+[data-theme="dark"] .drawer-nav { background:var(--surface); box-shadow:-8px 0 40px rgba(0,0,0,.5); }
+[data-theme="dark"] .logo-ifj { color:#93C5FD; }
+[data-theme="dark"] .logo-img { filter:brightness(0) invert(1) opacity(.85); }
+[data-theme="dark"] .lang-seg { background:var(--surface3); border-color:var(--border); }
+[data-theme="dark"] .lang-seg-opt { color:var(--text-3); }
+[data-theme="dark"] .icon-btn { color:var(--text-2); }
+[data-theme="dark"] .icon-btn:hover { background:var(--surface3); }
+[data-theme="dark"] .news-cat { color:#93C5FD; background:rgba(147,197,253,.12); }
+[data-theme="dark"] .news-card--featured .news-cat { color:var(--gold); background:rgba(249,199,79,.15); }
+[data-theme="dark"] .see-all { color:#93C5FD; background:rgba(147,197,253,.12); }
+[data-theme="dark"] .quick-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .about-card,[data-theme="dark"] .mission-card,
+[data-theme="dark"] .team-card  { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .activity-chip { background:var(--surface3); border-color:var(--border); }
+[data-theme="dark"] .prog-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .prog-tag { background:var(--surface3); color:var(--text-2); border-color:var(--border); }
+[data-theme="dark"] .faq-item { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .faq-question { color:var(--text); }
+[data-theme="dark"] .filter-tab { background:var(--surface3); color:var(--text-2); }
+[data-theme="dark"] .news-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .news-chip { background:var(--surface3); color:var(--text-2); }
+[data-theme="dark"] .news-full-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .media-tabs { background:var(--surface3); }
+[data-theme="dark"] .media-tab { color:var(--text-2); }
+[data-theme="dark"] .media-tab.active-media-tab { background:var(--surface); color:var(--primary-light); }
+[data-theme="dark"] .media-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .media-thumb { background:var(--surface3); }
+[data-theme="dark"] .partner-logo-item { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .partner-logo-item img { filter:grayscale(10%) brightness(1.15); }
+[data-theme="dark"] .campus-tab { background:var(--surface3); color:var(--text-2); border-color:var(--border); }
+[data-theme="dark"] .contact-card { background:var(--surface); border-color:var(--border); }
+[data-theme="dark"] .contact-btn--mail { background:var(--surface3); color:var(--text); border-color:var(--border); }
+[data-theme="dark"] .map-placeholder { background:var(--surface3); border-color:var(--border); }
+[data-theme="dark"] .form-input { background:var(--surface3); border-color:var(--border); color:var(--text); }
+[data-theme="dark"] .form-input:focus { border-color:var(--primary-light); }
+[data-theme="dark"] .contact-form .form-submit { background:var(--primary); }
+[data-theme="dark"] .social-pill { background:var(--surface3); border-color:var(--border); color:var(--text-2); }
+[data-theme="dark"] .drawer-link { color:var(--text-2); }
+[data-theme="dark"] .drawer-link:hover,
+[data-theme="dark"] .drawer-link.active-link { background:var(--surface3); color:#93C5FD; }
+[data-theme="dark"] .drawer-header { border-color:var(--border); }
+[data-theme="dark"] .drawer-social { border-color:var(--border); }
+[data-theme="dark"] .prog-mini-card { background:var(--surface); border-color:var(--border); }
+
+/* Theme toggle icons */
+.theme-icon-moon { display:block; }
+.theme-icon-sun  { display:none; }
+[data-theme="dark"] .theme-icon-moon { display:none; }
+[data-theme="dark"] .theme-icon-sun  { display:block; }
+
 /* ── Desktop ── */
 @media (min-width:640px) {
   .hero-slider { height:560px; }

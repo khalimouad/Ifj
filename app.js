@@ -254,6 +254,13 @@ const translations = {
   }
 };
 
+// ── Theme ─────────────────────────────────────────────────────
+(function () {
+  const saved = localStorage.getItem('ifj-theme');
+  const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.dataset.theme = saved || preferred;
+})();
+
 // ── Language state ────────────────────────────────────────────
 let currentLang = localStorage.getItem('ifj-lang') || 'fr';
 
@@ -300,6 +307,13 @@ window.addEventListener('DOMContentLoaded', () => {
     app.classList.remove('hidden');
     animateStats();
   }, 2600);
+});
+
+// ── Theme Toggle ─────────────────────────────────────────────
+document.getElementById('themeBtn')?.addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  localStorage.setItem('ifj-theme', next);
 });
 
 // ── Lang Toggle ───────────────────────────────────────────────
