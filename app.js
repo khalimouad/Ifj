@@ -330,16 +330,26 @@ function navigateTo(pageId) {
   navItems.forEach(n => n.classList.remove('active-nav'));
 
   const target = document.getElementById('page-' + pageId);
-  if (target) {
-    target.classList.add('active-page');
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }
+  if (target) target.classList.add('active-page');
+
   navItems.forEach(n => {
     if (n.dataset.page === pageId) n.classList.add('active-nav');
   });
   document.querySelectorAll('.drawer-link').forEach(l => {
     l.classList.toggle('active-link', l.dataset.page === pageId);
   });
+  document.querySelectorAll('.sidebar-link').forEach(l => {
+    l.classList.toggle('active-slink', l.dataset.page === pageId);
+  });
+
+  // On desktop the main-content div scrolls; on mobile the window scrolls
+  const mc = document.querySelector('.main-content');
+  if (window.innerWidth >= 1024 && mc) {
+    mc.scrollTo({ top: 0, behavior: 'instant' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+
   closeDrawer();
 }
 
@@ -514,10 +524,12 @@ document.querySelectorAll('.campus-tab').forEach(tab => {
 });
 
 // ── Contact Form ──────────────────────────────────────────────
-document.getElementById('contactForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  showToast(translations[currentLang].toast_sent);
-  e.target.reset();
+['contactForm', 'contactFormDesktop'].forEach(id => {
+  document.getElementById(id)?.addEventListener('submit', e => {
+    e.preventDefault();
+    showToast(translations[currentLang].toast_sent);
+    e.target.reset();
+  });
 });
 
 // ── Toast ─────────────────────────────────────────────────────
